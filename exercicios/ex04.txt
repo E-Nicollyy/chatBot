@@ -1,0 +1,87 @@
+Documentação da Função desconto()
+Descrição
+
+A função desconto() calcula o valor final de um produto após a aplicação de um desconto percentual. Ela recebe o preço original e a porcentagem de desconto, realiza o cálculo e retorna o novo valor do produto.
+
+function desconto(preco, porcentagem) {
+    return preco - (preco * porcentagem / 100);
+}
+Parâmetros
+preco
+Tipo: Number
+Obrigatório: Sim
+
+Representa o valor original do produto antes da aplicação do desconto. Esse valor serve como base para o cálculo.
+
+Exemplos:
+
+100
+59.90
+250
+porcentagem
+Tipo: Number
+Obrigatório: Sim
+
+Indica o percentual de desconto que será aplicado sobre o preço original. Geralmente, seu valor deve estar entre 0 e 100.
+
+Exemplos:
+
+10
+25
+50
+Funcionamento
+
+A função realiza duas operações:
+
+Calcula o valor do desconto:
+
+preco * porcentagem / 100
+
+Subtrai esse valor do preço original:
+
+preco - (preco * porcentagem / 100)
+Exemplo
+desconto(200, 15);
+
+Cálculo:
+
+Valor do desconto: 200 × 15 ÷ 100 = 30
+Preço final: 200 - 30 = 170
+
+Retorno:
+
+170
+Valor de Retorno
+Tipo: Number
+
+A função retorna o preço final do produto após a aplicação do desconto.
+
+Exemplo:
+
+let valorFinal = desconto(150, 20);
+
+console.log(valorFinal);
+
+Saída:
+
+120
+Exemplo de Uso
+function desconto(preco, porcentagem) {
+    return preco - (preco * porcentagem / 100);
+}
+
+console.log(desconto(100, 10)); // 90
+console.log(desconto(250, 30)); // 175
+console.log(desconto(80, 5));   // 76
+Observações
+Os dois parâmetros devem ser do tipo Number.
+O preço deve ser maior ou igual a 0.
+A porcentagem de desconto deve, preferencialmente, estar entre 0 e 100.
+Como a função retorna um valor, ele pode ser armazenado em uma variável ou utilizado diretamente em outras operações.
+Resumo
+Item	Descrição
+Nome da função	desconto
+Objetivo	Calcular o preço final de um produto após um desconto percentual
+Parâmetros	preco (valor original) e porcentagem (percentual de desconto)
+Retorno	Number contendo o preço final com o desconto aplicado
+Aplicação	Sistemas de vendas, e-commerce, calculadoras de desconto e controle financeiro
